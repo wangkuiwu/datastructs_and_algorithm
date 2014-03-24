@@ -1,0 +1,10 @@
+
+
+*.[sS]
+*.o
+*.swp
+*.vim
+*.tgz
+*.out
+*.class
+
