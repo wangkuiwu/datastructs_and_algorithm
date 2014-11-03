@@ -103,7 +103,7 @@ LGraph* create_lgraph()
 
     // 初始化"顶点数"和"边数"
     pG->vexnum = v;
-    pG->edgnum = e;
+    pG->edgenum = e;
     // 初始化"邻接表"的顶点
     for(i=0; i<pG->vexnum; i++)
     {
@@ -113,7 +113,7 @@ LGraph* create_lgraph()
     }
 
     // 初始化"邻接表"的边
-    for(i=0; i<pG->vexnum; i++)
+    for(i=0; i<pG->edgenum; i++)
     {
         // 读取边的起始顶点和结束顶点
         printf("edge(%d): ", i);
