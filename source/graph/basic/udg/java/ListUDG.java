@@ -129,11 +129,31 @@ public class ListUDG {
      * 将node节点链接到list的最后
      */
     private void linkLast(ENode list, ENode node) {
+        
+        // 判断list中是否有node
+        if(hasNode(list, node))
+            return;
+
+        
         ENode p = list;
 
         while(p.nextEdge!=null)
             p = p.nextEdge;
         p.nextEdge = node;
+    }
+    
+    // 单链表的查询功能
+    private boolean hasNode(ENode list, ENode node) {
+        if(list == null) {
+            return false;
+        }
+
+        ENode n = list;
+        if(n.index == node.index){
+            return true;
+        }else{
+            return hasNode(n.next, node);
+        }
     }
 
     /*
